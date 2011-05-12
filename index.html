@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="es" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="es" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	  	<!--<link rel="stylesheet" type="text/css" href="src/css/sf.css">-->
+		
+		<title>Shortcut Fired</title>
+	</head>
+
+	<body>
+		<form action="index.html" method="get">
+			<p><input type="text" class="lala"/></p>
+			<p><textarea></textarea></p>
+		</form>
+		
+		<script src="libs/jquery-1.4.4.js"></script>
+		<script src="libs/sizzle.js"></script>
+		<script src="src/js/shortcutfired.js"></script>
+		
+		<script>
+			var saludo = function(){
+				alert("You'll can't save the page baby... enjoy this shortcut!!!");
+			};
+			
+			$("body").shortcut("enter", saludo);
+			$.shortcut("ctrl+s", saludo);
+			
+		</script>
+	</body>
+</html>
