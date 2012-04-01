@@ -1,13 +1,25 @@
-hotkey.js
+hotkeys.js
 ============
-A simple micro-library for defining and dispatching hotkeys.
+A simple library for add/remove hotkeys to DOM.
 
 # Syntax
 --------
-
 ``` js
-
+key.on(keys, CSS selector, fn, event);
+key.off(keys, CSS selector, fn);
 ```
+
+Example: 
+``` js
+key.on("enter", "body", callback, "up");
+```
+
+# TODO
+--------
+Remove hotkey from DOM element.
+Add/remove multiple events.
+Multiple selectors.
+
 
 # Contact
 ---------

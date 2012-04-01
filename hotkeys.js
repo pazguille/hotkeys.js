@@ -176,7 +176,7 @@
 				// View the pressed key
 				//console.log( ( modifierKey ) ? modifierKey + "+" + currentKey : currentKey );
 			},
-			add = function (key, element, fn, type) {
+			on = function (key, element, fn, type) {
 				if (!key || !fn) { 
 					throw("Shorcut error.");
 				}
@@ -205,6 +205,9 @@
 
 				return element;
 			},
+			off = function (key, element, fn) {
+				// TODO
+			},
 
 			core = function (key) {
 				core.key = core.prototype.key = key;
@@ -214,7 +217,8 @@
 			core.prototype = {};
 			core.version = "0.1";
 			core.list = list;
-			core.add = core.prototype.add = add;
+			core.on = core.prototype.on = on;
+			core.off = core.prototype.off = off;
 
 		return core;
 
