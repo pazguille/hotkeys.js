@@ -15,9 +15,9 @@ key.on("enter", "body", callback, "up");
 ```
 
 ## TODO
-Remove hotkey from DOM element.
-Add/remove multiple events.
-Multiple selectors.
+- Remove hotkey from DOM element.
+- Add/remove multiple events.
+- Multiple selectors.
 
 
 ## Contact
