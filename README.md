@@ -5,13 +5,13 @@ A simple library for add/remove hotkeys to DOM.
 ## Syntax
 
 ``` js
-key.on(keys, CSS selector, fn, event);
-key.off(keys, CSS selector, fn);
+hotkey.add(keys, CSS selector, fn, event);
+hotkey.rm(keys, CSS selector, fn);
 ```
 
 Example: 
 ``` js
-key.on("enter", "body", callback, "up");
+hotkey.add("enter", "body", callback, "up");
 ```
 
 ## TODO
