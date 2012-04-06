@@ -10,7 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	  	<!--<link rel="stylesheet" type="text/css" href="src/css/sf.css">-->
 		
-		<title>Hotkey Events</title>
+		<title>Hotkeys Events</title>
 	</head>
 
 	<body>
@@ -18,13 +18,14 @@
 			<p><input type="text" class="lala"/></p>
 			<p><textarea></textarea></p>
 		</form>
-		<script src="hotkey.js"></script>
+		<script src="hotkeys.js"></script>
 		<script>
 			var bye = function(){
 				console.log("You say goodbye, and i say hello! :)");
 			};
 
-			key.add("enter", "body", bye, "down");
+			hotkey.add("meta+s", "body", bye);
+			//hotkey.rm("meta+s", "body", bye);
 
 		</script>
 	</body>

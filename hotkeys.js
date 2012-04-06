@@ -135,12 +135,12 @@
 			},
 
 		    knowKey = function (event, key, fn) {
-				var event = event || window.event;//Get the event
-				var codeKey = event.which || event.keyCode;
-				var charKey = String.fromCharCode(codeKey).toLowerCase();
-				var specialKey = specialKeys[codeKey];
-				var modifierKey = getModifiers(event);
-				var currentKey;
+				var event = event || window.event,//Get the event
+					codeKey = event.which || event.keyCode,
+					charKey = String.fromCharCode(codeKey).toLowerCase(),
+					specialKey = specialKeys[codeKey],
+					modifierKey = getModifiers(event),
+					currentKey;
 
 				if (key.length >= 2) {
 
@@ -176,13 +176,14 @@
 				// View the pressed key
 				//console.log( ( modifierKey ) ? modifierKey + "+" + currentKey : currentKey );
 			},
-			on = function (key, element, fn, type) {
+			add = function (key, element, fn, type) {
+
 				if (!key || !fn) { 
-					throw("Shorcut error.");
+					throw("Hotkey error.");
 				}
 
 				var type = type || "down",
-					element = document.querySelectorAll(element)[0],
+					element = qsa(element)[0],
 					pressKey = key.toLowerCase().split("+");
 
 
@@ -194,7 +195,7 @@
 					}
 
 					// Run baby... ehh forest, run!
-					knowKey(event, pressKey , fn);
+					knowKey(event, pressKey, fn);
 				});
 
 				list.push({
@@ -205,7 +206,7 @@
 
 				return element;
 			},
-			off = function (key, element, fn) {
+			rm = function (key, element, fn) {
 				// TODO
 			},
 
@@ -217,8 +218,8 @@
 			core.prototype = {};
 			core.version = "0.1";
 			core.list = list;
-			core.on = core.prototype.on = on;
-			core.off = core.prototype.off = off;
+			core.add = core.prototype.add = add;
+			core.rm = core.prototype.rm = rm;
 
 		return core;
 
