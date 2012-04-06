@@ -1,9 +1,9 @@
 hotkeys.js
-============
+==========
 A simple library for add/remove hotkeys to DOM.
 
-# Syntax
---------
+## Syntax
+
 ``` js
 key.on(keys, CSS selector, fn, event);
 key.off(keys, CSS selector, fn);
@@ -14,22 +14,20 @@ Example:
 key.on("enter", "body", callback, "up");
 ```
 
-# TODO
---------
+## TODO
 Remove hotkey from DOM element.
 Add/remove multiple events.
 Multiple selectors.
 
 
-# Contact
----------
-- Guillermo Paz (Frontender)
-- e-mail: guille87paz (at) gmail.com
-- Twitter: @pazguille
+## Contact
+- Guillermo Paz (Frontend developer - JavaScript developer | Web standards lover)
+- e-mail: [guille87paz@gmail.com](mailto:guille87paz@gmail.com)
+- Twitter: [@pazguille](http://twitter.com/pazguille)
 
 
-# License
----------
+## License
+
 Copyright (c) 2012
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
